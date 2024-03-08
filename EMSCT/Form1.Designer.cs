@@ -96,6 +96,7 @@
             btn__login_signup.TabIndex = 1;
             btn__login_signup.Text = "SIGN UP";
             btn__login_signup.UseVisualStyleBackColor = false;
+            btn__login_signup.Click += btn__login_signup_Click;
             // 
             // label5
             // 
