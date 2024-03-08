@@ -11,5 +11,10 @@ namespace EMSCT
         {
             Application.Exit();
         }
+
+        private void btn_login_signin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
