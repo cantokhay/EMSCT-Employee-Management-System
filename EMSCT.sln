@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSCT.UI", "EMSCT\EMSCT.UI.csproj", "{3E16E10E-5C34-4C9E-AE76-45121F7108F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSCT.DATA", "EMSCT.DATA\EMSCT.DATA.csproj", "{92D56B2B-3634-4F51-A0D8-2E1BC632BC3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSCT.DAL", "EMSCT.DAL\EMSCT.DAL.csproj", "{17D5F189-744D-4A74-8AA7-ACD9D18986DF}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E16E10E-5C34-4C9E-AE76-45121F7108F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E16E10E-5C34-4C9E-AE76-45121F7108F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E16E10E-5C34-4C9E-AE76-45121F7108F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E16E10E-5C34-4C9E-AE76-45121F7108F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D56B2B-3634-4F51-A0D8-2E1BC632BC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D56B2B-3634-4F51-A0D8-2E1BC632BC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D56B2B-3634-4F51-A0D8-2E1BC632BC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D56B2B-3634-4F51-A0D8-2E1BC632BC3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17D5F189-744D-4A74-8AA7-ACD9D18986DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17D5F189-744D-4A74-8AA7-ACD9D18986DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17D5F189-744D-4A74-8AA7-ACD9D18986DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17D5F189-744D-4A74-8AA7-ACD9D18986DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
