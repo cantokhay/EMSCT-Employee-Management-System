@@ -193,6 +193,7 @@
             btn_login_signin.TabIndex = 6;
             btn_login_signin.Text = "SIGN IN";
             btn_login_signin.UseVisualStyleBackColor = false;
+            btn_login_signin.Click += btn_login_signin_Click;
             // 
             // Form1
             // 
