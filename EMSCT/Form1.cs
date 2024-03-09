@@ -1,3 +1,5 @@
+using EMSCT.UI;
+
 namespace EMSCT
 {
     public partial class Form1 : Form
@@ -19,7 +21,9 @@ namespace EMSCT
 
         private void btn__login_signup_Click(object sender, EventArgs e)
         {
-
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+            this.Hide();
         }
     }
 }
