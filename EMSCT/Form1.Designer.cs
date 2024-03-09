@@ -31,7 +31,7 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             label6 = new Label();
-            btn__login_signup = new Button();
+            btn_login_signup = new Button();
             label5 = new Label();
             exit = new Label();
             label2 = new Label();
@@ -51,7 +51,7 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(btn__login_signup);
+            panel1.Controls.Add(btn_login_signup);
             panel1.Controls.Add(label5);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -80,22 +80,23 @@
             label6.TabIndex = 2;
             label6.Text = "Employee Management System";
             // 
-            // btn__login_signup
+            // btn_login_signup
             // 
-            btn__login_signup.BackColor = Color.FromArgb(33, 11, 97);
-            btn__login_signup.Cursor = Cursors.Hand;
-            btn__login_signup.FlatAppearance.BorderSize = 0;
-            btn__login_signup.FlatAppearance.MouseDownBackColor = Color.Purple;
-            btn__login_signup.FlatAppearance.MouseOverBackColor = Color.Purple;
-            btn__login_signup.FlatStyle = FlatStyle.Flat;
-            btn__login_signup.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn__login_signup.ForeColor = Color.White;
-            btn__login_signup.Location = new Point(33, 353);
-            btn__login_signup.Name = "btn__login_signup";
-            btn__login_signup.Size = new Size(169, 34);
-            btn__login_signup.TabIndex = 1;
-            btn__login_signup.Text = "SIGN UP";
-            btn__login_signup.UseVisualStyleBackColor = false;
+            btn_login_signup.BackColor = Color.FromArgb(33, 11, 97);
+            btn_login_signup.Cursor = Cursors.Hand;
+            btn_login_signup.FlatAppearance.BorderSize = 0;
+            btn_login_signup.FlatAppearance.MouseDownBackColor = Color.Purple;
+            btn_login_signup.FlatAppearance.MouseOverBackColor = Color.Purple;
+            btn_login_signup.FlatStyle = FlatStyle.Flat;
+            btn_login_signup.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_login_signup.ForeColor = Color.White;
+            btn_login_signup.Location = new Point(33, 353);
+            btn_login_signup.Name = "btn_login_signup";
+            btn_login_signup.Size = new Size(169, 34);
+            btn_login_signup.TabIndex = 1;
+            btn_login_signup.Text = "SIGN UP";
+            btn_login_signup.UseVisualStyleBackColor = false;
+            btn_login_signup.Click += btn__login_signup_Click;
             // 
             // label5
             // 
@@ -163,6 +164,7 @@
             tbx_login_password.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             tbx_login_password.Location = new Point(280, 243);
             tbx_login_password.Name = "tbx_login_password";
+            tbx_login_password.PasswordChar = '*';
             tbx_login_password.Size = new Size(268, 26);
             tbx_login_password.TabIndex = 4;
             // 
@@ -233,7 +235,7 @@
         private TextBox tbx_login_password;
         private CheckBox cbx_login_Password;
         private Button btn_login_signin;
-        private Button btn__login_signup;
+        private Button btn_login_signup;
         private Label label5;
         private PictureBox pictureBox1;
         private Label label6;

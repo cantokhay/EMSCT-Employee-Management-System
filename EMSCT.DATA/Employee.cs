@@ -10,6 +10,7 @@ namespace EMSCT.DATA
         public DateTime? DeleteDate { get; set; }
         public Status Status { get; set; }
         public Gender Gender { get; set; }
+        public string Password { get; set; }
 
         public DateTime BirthDate { get; set; }
     }
