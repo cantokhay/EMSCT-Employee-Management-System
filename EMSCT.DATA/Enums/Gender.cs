@@ -1,4 +1,4 @@
-﻿namespace EMSCT.DATA
+﻿namespace EMSCT.DATA.Enums
 {
     public enum Gender
     {
