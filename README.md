@@ -19,7 +19,12 @@ The primary goal is to implement a C# WinForms application that seamlessly inter
 - **Authentication and Identity:** Implementing secure user authentication and identity management.
 - **JWT (JSON Web Tokens):** Employing JWT for secure communication between the desktop app and APIs.
 - **JSON Technologies:** Handling JSON data for seamless communication with APIs.
-
+- **AutoFac:** Implementing Dependency Injection for improved code organization and flexibility.
+- **Data Annotations:** Leveraging Data Annotations for defining validation rules and constraints within the application.
+- **Fluent API:** Utilizing Fluent API to configure and customize Entity Framework models and mappings for more advanced scenarios.
+- **Validation Classes:** Incorporating Validation Classes to ensure data integrity and correctness when saving data to tables.
+- **DTOs (Data Transfer Objects):** Implementing DTOs to facilitate structured and efficient data exchange between different layers of the application.
+  
 ### Learning Objectives
 
 This project serves as a platform to revisit and reinforce previous learnings while venturing into new territory. Although API development is familiar, integrating it into a WinForms application presents unique challenges. The developer acknowledges uncertainties but expresses confidence in overcoming hurdles and ensuring the project's success.
