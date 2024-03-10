@@ -1,3 +1,5 @@
+using EMSCT.DAL.Context;
+
 namespace EMSCT
 {
     internal static class Program
@@ -12,6 +14,7 @@ namespace EMSCT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+            AppDbContext context = new AppDbContext();
         }
     }
 }

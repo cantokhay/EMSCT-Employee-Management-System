@@ -125,7 +125,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(280, 87);
+            label2.Location = new Point(280, 78);
             label2.Name = "label2";
             label2.Size = new Size(141, 22);
             label2.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(280, 152);
+            label3.Location = new Point(280, 145);
             label3.Name = "label3";
             label3.Size = new Size(75, 16);
             label3.TabIndex = 3;
@@ -143,8 +143,10 @@
             // 
             // tbx_login_username
             // 
+            tbx_login_username.BackColor = SystemColors.MenuBar;
+            tbx_login_username.Cursor = Cursors.Hand;
             tbx_login_username.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tbx_login_username.Location = new Point(280, 171);
+            tbx_login_username.Location = new Point(280, 164);
             tbx_login_username.Name = "tbx_login_username";
             tbx_login_username.Size = new Size(268, 26);
             tbx_login_username.TabIndex = 4;
@@ -153,7 +155,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(280, 224);
+            label4.Location = new Point(280, 217);
             label4.Name = "label4";
             label4.Size = new Size(71, 16);
             label4.TabIndex = 3;
@@ -161,8 +163,10 @@
             // 
             // tbx_login_password
             // 
+            tbx_login_password.BackColor = SystemColors.MenuBar;
+            tbx_login_password.Cursor = Cursors.Hand;
             tbx_login_password.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tbx_login_password.Location = new Point(280, 243);
+            tbx_login_password.Location = new Point(280, 236);
             tbx_login_password.Name = "tbx_login_password";
             tbx_login_password.PasswordChar = '*';
             tbx_login_password.Size = new Size(268, 26);
@@ -171,8 +175,9 @@
             // cbx_login_Password
             // 
             cbx_login_Password.AutoSize = true;
+            cbx_login_Password.Cursor = Cursors.Hand;
             cbx_login_Password.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            cbx_login_Password.Location = new Point(445, 278);
+            cbx_login_Password.Location = new Point(445, 271);
             cbx_login_Password.Name = "cbx_login_Password";
             cbx_login_Password.Size = new Size(112, 18);
             cbx_login_Password.TabIndex = 5;
@@ -189,7 +194,7 @@
             btn_login_signin.FlatStyle = FlatStyle.Flat;
             btn_login_signin.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_login_signin.ForeColor = Color.White;
-            btn_login_signin.Location = new Point(280, 314);
+            btn_login_signin.Location = new Point(280, 351);
             btn_login_signin.Name = "btn_login_signin";
             btn_login_signin.Size = new Size(86, 37);
             btn_login_signin.TabIndex = 6;

@@ -1,4 +1,6 @@
-﻿namespace EMSCT.DATA
+﻿using EMSCT.DATA.Enums;
+
+namespace EMSCT.DATA.Entities
 {
     public class Department : IBaseEntity
     {

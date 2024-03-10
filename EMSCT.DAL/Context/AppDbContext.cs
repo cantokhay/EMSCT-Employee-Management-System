@@ -1,12 +1,12 @@
-﻿using EMSCT.DAL.Mapping;
-using EMSCT.DATA;
+﻿using EMSCT.DAL.Context.Mapping;
+using EMSCT.DATA.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace EMSCT.DAL.Context
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
 
         override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
