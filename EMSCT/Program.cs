@@ -14,7 +14,6 @@ namespace EMSCT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-            AppDbContext context = new AppDbContext();
         }
     }
 }

@@ -1,26 +1,26 @@
-﻿using EMSCT.DAL.Context.Mapping;
-using EMSCT.DATA.Entities;
+﻿using EMSCT.DAL.Config;
+using EMSCT.DATA.Entities.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace EMSCT.DAL.Context
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser, IdentityRole<int>, int>
     {
-        public DbSet<Employee> Departments { get; set; }
-        public DbSet<Employee> Employees { get; set; }
-
-        override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-OHO9G30\SQLEXPRESS;Database=EMSCT;Trusted_Connection=True;");
-        }
 
-        //automapper
+        }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<AppUser> Employees { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            new DepartmentMapping().Configure(modelBuilder.Entity<Department>());
-            new EmployeeMapping().Configure(modelBuilder.Entity<Employee>());
-
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new AppUserMapConfig())
+                        .ApplyConfiguration(new DepartmentMapConfig());
         }
     }
 }

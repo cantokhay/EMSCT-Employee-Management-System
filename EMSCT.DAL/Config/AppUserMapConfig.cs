@@ -1,12 +1,12 @@
-﻿using EMSCT.DATA.Entities;
+﻿using EMSCT.DATA.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EMSCT.DAL.Context.Mapping
+namespace EMSCT.DAL.Config
 {
-    public class EmployeeMapping : IEntityTypeConfiguration<Employee>
+    public class AppUserMapConfig : BaseEntityMapConfig<AppUser>
     {
-        public void Configure(EntityTypeBuilder<Employee> builder)
+        public override void Configure(EntityTypeBuilder<AppUser> builder)
         {
             builder.ToTable("AppUser");
 
@@ -35,12 +35,6 @@ namespace EMSCT.DAL.Context.Mapping
                 .HasMaxLength(50)
                 .IsRequired();
 
-            builder.Property(a => a.Password)
-                .HasColumnType("nvarchar")
-                .HasColumnName("Password")
-                .HasMaxLength(60)
-                .IsRequired();
-
             builder.Property(a => a.BirthDate)
                 .HasColumnType("DateTime")
                 .HasColumnName("BirthDate");
@@ -50,6 +44,15 @@ namespace EMSCT.DAL.Context.Mapping
                 .HasColumnName("Email")
                 .HasMaxLength(75)
                 .IsRequired();
+
+            //one to many with department
+            builder.HasOne(a => a.Department)
+                .WithMany(a => a.Employees)
+                .HasForeignKey(a => a.DepartmentId)
+                .HasConstraintName("Department of Employee")
+                .OnDelete(DeleteBehavior.NoAction);
+
+            base.Configure(builder);
         }
     }
 }
