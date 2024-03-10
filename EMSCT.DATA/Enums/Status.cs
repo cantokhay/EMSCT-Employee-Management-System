@@ -4,6 +4,7 @@
     {
         Active = 1,
         Modified = 2,
-        Deleted = 3
+        Deleted = 3,
+        Inactive = 4
     }
 }

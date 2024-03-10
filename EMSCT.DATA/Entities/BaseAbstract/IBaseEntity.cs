@@ -1,15 +1,14 @@
 ﻿using EMSCT.DATA.Enums;
 
-namespace EMSCT.DATA
+namespace EMSCT.DATA.Entities.BaseAbstract
 {
     public interface IBaseEntity
     {
-        public DateTime? CreateDate { get; set; }
-
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime CreateDate { get; set; }
         public DateTime? UpdateDate { get; set; }
-
         public DateTime? DeleteDate { get; set; }
-
         public Status Status { get; set; }
     }
 }

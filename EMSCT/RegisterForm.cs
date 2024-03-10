@@ -1,5 +1,5 @@
 ﻿using EMSCT.DAL.Context;
-using EMSCT.DATA.Entities;
+using EMSCT.DATA.Entities.Concrete;
 using EMSCT.DATA.Enums;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -17,7 +17,6 @@ namespace EMSCT.UI
         
         private void RegisterForm_Load(object sender, EventArgs e)
         {
-            new AppDbContext();
             tbxRegisterPassword.UseSystemPasswordChar = true;
 
             cbxRegisterGender.DataSource = Enum.GetValues(typeof(Gender));
@@ -46,7 +45,7 @@ namespace EMSCT.UI
 
         private void btn_register_signup_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
+            AppUser employee = new AppUser();
 
             try
             {

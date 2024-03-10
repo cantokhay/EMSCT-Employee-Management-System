@@ -1,12 +1,12 @@
-﻿using EMSCT.DATA.Entities;
+﻿using EMSCT.DATA.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EMSCT.DAL.Context.Mapping
+namespace EMSCT.DAL.Config
 {
-    public class DepartmentMapping : IEntityTypeConfiguration<Department>
+    public class DepartmentMapConfig : BaseEntityMapConfig<Department>
     {
-        public void Configure(EntityTypeBuilder<Department> builder)
+        public override void Configure(EntityTypeBuilder<Department> builder)
         {
             builder.ToTable("Departments");
 
@@ -27,6 +27,8 @@ namespace EMSCT.DAL.Context.Mapping
                 .HasColumnType("nvarchar")
                 .HasColumnName("Department Description")
                 .HasMaxLength(200);
+
+            base.Configure(builder);
         }
     }
 }
