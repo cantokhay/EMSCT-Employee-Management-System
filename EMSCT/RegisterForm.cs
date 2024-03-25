@@ -8,7 +8,7 @@ namespace EMSCT.UI
 {
     public partial class RegisterForm : Form
     {
-        AppDbContext db;
+        AppDbContext _db;
 
         public RegisterForm()
         {
@@ -49,7 +49,7 @@ namespace EMSCT.UI
 
             try
             {
-                var checkEmployee = db.Employees.FirstOrDefault(x => x.UserName == tbxRegisterUserName.Text);
+                var checkEmployee = _db.Employees.FirstOrDefault(x => x.UserName == tbxRegisterUserName.Text);
 
                 if (checkEmployee != null)
                 {
@@ -140,8 +140,8 @@ namespace EMSCT.UI
                 MessageBox.Show(ex.Message + "There is an unknown error!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            db.Add(employee);
-            db.SaveChanges();
+            _db.Add(employee);
+            _db.SaveChanges();
         }
     }
 }

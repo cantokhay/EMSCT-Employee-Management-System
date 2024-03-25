@@ -1,15 +1,16 @@
-﻿using EMSCT.DATA.Entities.BaseAbstract;
+﻿using EMSCT.DATA.Entities.Abstract;
 using EMSCT.DATA.Enums;
 using Microsoft.AspNetCore.Identity;
 
 namespace EMSCT.DATA.Entities.Concrete
 {
-    public class AppUser : IdentityUser<int>, IBaseEntity
+    public class AppUser : IdentityUser, IBaseEntity
     {
         public AppUser()
         {
             
         }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public DateTime CreateDate { get; set; }

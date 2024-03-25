@@ -56,15 +56,15 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(254, 400);
+            panel1.Size = new Size(254, 353);
             panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = UI.Properties.Resources.Employment_PNG_Clipart;
-            pictureBox1.Location = new Point(61, 35);
+            pictureBox1.Location = new Point(61, 31);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.Size = new Size(100, 88);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -74,7 +74,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(11, 138);
+            label6.Location = new Point(11, 122);
             label6.Name = "label6";
             label6.Size = new Size(216, 18);
             label6.TabIndex = 2;
@@ -90,9 +90,9 @@
             btn_login_signup.FlatStyle = FlatStyle.Flat;
             btn_login_signup.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_login_signup.ForeColor = Color.White;
-            btn_login_signup.Location = new Point(33, 353);
+            btn_login_signup.Location = new Point(33, 311);
             btn_login_signup.Name = "btn_login_signup";
-            btn_login_signup.Size = new Size(169, 34);
+            btn_login_signup.Size = new Size(169, 30);
             btn_login_signup.TabIndex = 1;
             btn_login_signup.Text = "SIGN UP";
             btn_login_signup.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(49, 336);
+            label5.Location = new Point(49, 296);
             label5.Name = "label5";
             label5.Size = new Size(130, 14);
             label5.TabIndex = 0;
@@ -114,7 +114,7 @@
             exit.AutoSize = true;
             exit.Cursor = Cursors.Hand;
             exit.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            exit.Location = new Point(556, 9);
+            exit.Location = new Point(556, 8);
             exit.Name = "exit";
             exit.Size = new Size(17, 18);
             exit.TabIndex = 1;
@@ -125,7 +125,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(280, 78);
+            label2.Location = new Point(280, 69);
             label2.Name = "label2";
             label2.Size = new Size(141, 22);
             label2.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(280, 145);
+            label3.Location = new Point(280, 128);
             label3.Name = "label3";
             label3.Size = new Size(75, 16);
             label3.TabIndex = 3;
@@ -146,7 +146,7 @@
             tbx_login_username.BackColor = SystemColors.MenuBar;
             tbx_login_username.Cursor = Cursors.Hand;
             tbx_login_username.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tbx_login_username.Location = new Point(280, 164);
+            tbx_login_username.Location = new Point(280, 145);
             tbx_login_username.Name = "tbx_login_username";
             tbx_login_username.Size = new Size(268, 26);
             tbx_login_username.TabIndex = 4;
@@ -155,7 +155,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(280, 217);
+            label4.Location = new Point(280, 191);
             label4.Name = "label4";
             label4.Size = new Size(71, 16);
             label4.TabIndex = 3;
@@ -166,7 +166,7 @@
             tbx_login_password.BackColor = SystemColors.MenuBar;
             tbx_login_password.Cursor = Cursors.Hand;
             tbx_login_password.Font = new Font("Tahoma", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            tbx_login_password.Location = new Point(280, 236);
+            tbx_login_password.Location = new Point(280, 208);
             tbx_login_password.Name = "tbx_login_password";
             tbx_login_password.PasswordChar = '*';
             tbx_login_password.Size = new Size(268, 26);
@@ -177,7 +177,7 @@
             cbx_login_Password.AutoSize = true;
             cbx_login_Password.Cursor = Cursors.Hand;
             cbx_login_Password.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            cbx_login_Password.Location = new Point(445, 271);
+            cbx_login_Password.Location = new Point(445, 239);
             cbx_login_Password.Name = "cbx_login_Password";
             cbx_login_Password.Size = new Size(112, 18);
             cbx_login_Password.TabIndex = 5;
@@ -194,9 +194,9 @@
             btn_login_signin.FlatStyle = FlatStyle.Flat;
             btn_login_signin.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_login_signin.ForeColor = Color.White;
-            btn_login_signin.Location = new Point(280, 351);
+            btn_login_signin.Location = new Point(280, 310);
             btn_login_signin.Name = "btn_login_signin";
-            btn_login_signin.Size = new Size(86, 37);
+            btn_login_signin.Size = new Size(86, 33);
             btn_login_signin.TabIndex = 6;
             btn_login_signin.Text = "SIGN IN";
             btn_login_signin.UseVisualStyleBackColor = false;
@@ -204,10 +204,10 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(575, 400);
+            ClientSize = new Size(575, 353);
             Controls.Add(btn_login_signin);
             Controls.Add(cbx_login_Password);
             Controls.Add(tbx_login_password);
@@ -222,6 +222,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

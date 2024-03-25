@@ -1,4 +1,4 @@
-﻿using EMSCT.DATA.Entities.BaseAbstract;
+﻿using EMSCT.DATA.Entities.Abstract;
 using EMSCT.DATA.Enums;
 
 namespace EMSCT.DATA.Entities.Concrete

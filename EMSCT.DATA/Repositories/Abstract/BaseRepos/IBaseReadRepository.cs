@@ -1,8 +1,8 @@
-﻿using EMSCT.DATA.Entities.BaseAbstract;
+﻿using EMSCT.DATA.Entities.Abstract;
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
-namespace EMSCT.DATA.AbstractRepos.BaseRepos
+namespace EMSCT.DATA.Repositories.Abstract.BaseRepos
 {
     public interface IBaseReadRepository<T> where T : class, IBaseEntity, new()
     {
