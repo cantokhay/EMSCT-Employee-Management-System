@@ -6,7 +6,7 @@ namespace EMSCT.DATA.Repositories.Abstract.BaseRepos
     {
         Task<bool> InsertAsync(T entity);
         Task<bool> UpdateAsync(T entity);
-        Task<bool> DeleteAsync(Guid id);
+        Task<bool> DeleteAsync(T entity);
         Task<int> SaveChangesAsync();
         void DetachEntityAsync(T entity);
     }

@@ -12,44 +12,74 @@ namespace EMSCT.INFRA.Repositories.Concrete.BaseRepos
         private readonly AppDbContext _context;
         protected DbSet<T> _dbSet;
 
-        public Task<bool> Any(Expression<Func<T, bool>> expression)
+        public BaseReadRepository(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _dbSet = context.Set<T>();
         }
 
-        public Task<List<T>> GetAll()
+        public async Task<bool> Any(Expression<Func<T, bool>> expression)
         {
-            throw new NotImplementedException();
+            return await _dbSet.AnyAsync(expression);
         }
 
-        public Task<T> GetById(Guid id)
+        public async Task<List<T>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _dbSet.ToListAsync();
         }
 
-        public Task<T> GetDefault(Expression<Func<T, bool>> expression)
+        public async Task<T> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public Task<List<T>> GetDefaults(Expression<Func<T, bool>> expression)
+        public async Task<T> GetDefault(Expression<Func<T, bool>> expression)
         {
-            throw new NotImplementedException();
+            return await _dbSet.FirstOrDefaultAsync(expression);
         }
 
-        public Task<TResult> GetFilteredFirstOrDefault<TResult>(Expression<Func<T, TResult>> select, Expression<Func<T, bool>> where, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
+        public async Task<List<T>> GetDefaults(Expression<Func<T, bool>> expression)
         {
-            throw new NotImplementedException();
+            return await _dbSet.Where(expression).ToListAsync();
         }
 
-        public Task<List<TResult>> GetFilteredList<TResult>(Expression<Func<T, TResult>> select, Expression<Func<T, bool>> where, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
+        public async Task<TResult> GetFilteredFirstOrDefault<TResult>(Expression<Func<T, TResult>> select, Expression<Func<T, bool>> where, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = _dbSet;
+
+            if (where != null)
+                query = query.Where(where);
+
+            if (include != null)
+                query = include(query);
+
+            if (orderBy != null)
+                return await orderBy(query).Select(select).FirstOrDefaultAsync();
+
+            else
+                return await query.Select(select).FirstOrDefaultAsync();
         }
 
-        public Task<T> GetSingleDefault(Expression<Func<T, bool>> expression)
+        public async Task<List<TResult>> GetFilteredList<TResult>(Expression<Func<T, TResult>> select, Expression<Func<T, bool>> where, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = _dbSet;
+
+            if (where != null)
+                query = query.Where(where);
+
+            if (include != null)
+                query = include(query);
+
+            if (orderBy != null)
+                return await orderBy(query).Select(select).ToListAsync();
+
+            else
+                return await query.Select(select).ToListAsync();
+        }
+
+        public async Task<T> GetSingleDefault(Expression<Func<T, bool>> expression)
+        {
+            return await _dbSet.SingleOrDefaultAsync(expression);
         }
     }
 }

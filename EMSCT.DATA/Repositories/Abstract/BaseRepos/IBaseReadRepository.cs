@@ -11,7 +11,7 @@ namespace EMSCT.DATA.Repositories.Abstract.BaseRepos
         Task<T> GetSingleDefault(Expression<Func<T, bool>> expression);
         Task<List<T>> GetDefaults(Expression<Func<T, bool>> expression);
         Task<List<T>> GetAll();
-        Task<T> GetById(Guid id);
+        Task<T> GetById(int id);
         Task<TResult> GetFilteredFirstOrDefault<TResult>(
             Expression<Func<T, TResult>> select,
             Expression<Func<T, bool>> where,

@@ -1,4 +1,5 @@
 ﻿using EMSCT.DATA.Entities.Abstract;
+using EMSCT.DATA.Enums;
 using EMSCT.DATA.Repositories.Abstract.BaseRepos;
 using EMSCT.INFRA.Context;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +11,18 @@ namespace EMSCT.INFRA.Repositories.Concrete.BaseRepos
         private readonly AppDbContext _context;
         protected DbSet<T> _dbSet;
 
-        public Task<bool> DeleteAsync(Guid id)
+        public BaseWriteRepository(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _dbSet = context.Set<T>();
+        }
+
+        public async Task<bool> DeleteAsync(T entity)
+        {
+            entity = await _dbSet.FirstOrDefaultAsync(x => x.Id == entity.Id);
+            entity.Status = Status.Deleted;
+            entity.DeleteDate = DateTime.Now;
+            return await SaveChangesAsync() > 0;
         }
 
         public void DetachEntityAsync(T entity)
